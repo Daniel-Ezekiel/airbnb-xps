@@ -5,7 +5,7 @@ const MainContent = () => {
   return (
     <main>
       <Hero />
-      {/* <AllExperiences /> */}
+      <AllExperiences />
     </main>
   );
 };

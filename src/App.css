@@ -10,6 +10,8 @@ html {
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  line-height: 1.1;
+  color: #222222;
 }
 
 .App {
@@ -25,17 +27,24 @@ header {
 .navbar {
   max-width: 102.4rem;
   margin: auto;
-  padding: 2rem 1.2rem;
+  padding: 3rem 1.2rem;
 }
 
 .navbar > img {
   width: 10rem;
 }
 
-.hero {
+main {
   max-width: 102.4rem;
-  margin: auto;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,10 +65,55 @@ header {
   margin: 0.5rem 0;
   font-size: 3rem;
   line-height: 1.3;
+  color: #000;
 }
 
 .hero--description {
   font-size: 1.6rem;
+}
+
+.experiences {
+  width: 100%;
+}
+
+.experiences--card {
+  position: relative;
+  width: 17.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  font-size: 1.2rem;
+}
+
+.card--tag {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.card--image {
+  width: 100%;
+  border-radius: 0.9rem;
+}
+
+.card--rating {
+  color: #918e9b;
+}
+
+.card--rating > span {
+  color: #222222;
+}
+
+.card--title {
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 @media screen and (min-width: 425px) {
