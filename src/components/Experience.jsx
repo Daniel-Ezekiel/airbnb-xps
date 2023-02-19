@@ -1,4 +1,5 @@
 import experienceImage from '../assets/katie-zaferes.png';
+import star from '../assets/star.png';
 
 const Experience = () => {
   return (
@@ -12,7 +13,9 @@ const Experience = () => {
       />
 
       <p className="card--rating">
-        <span>* 5.0 </span>
+        <span>
+          <img src={star} alt="star" /> 5.0{' '}
+        </span>
         (6) . USA
       </p>
       <h3 className="card--title">Life lessons with Katie Zaferes</h3>

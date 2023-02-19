@@ -36,12 +36,13 @@ header {
 
 main {
   max-width: 102.4rem;
+  margin: auto;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 .hero {
@@ -104,11 +105,21 @@ main {
 }
 
 .card--rating {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
   color: #918e9b;
 }
 
 .card--rating > span {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
   color: #222222;
+}
+
+.card--rating img {
+  width: 1.4rem;
 }
 
 .card--title {
