@@ -1,7 +1,7 @@
 import experienceImage from '../assets/katie-zaferes.png';
 import star from '../assets/star.png';
 
-const Experience = () => {
+const Card = () => {
   return (
     <div className="experiences--card">
       <span className="card--tag">Sold out</span>
@@ -26,4 +26,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Card;
