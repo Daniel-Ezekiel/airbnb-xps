@@ -1,21 +1,33 @@
 import star from '../assets/star.png';
 
-const Card = ({ tag, img, rating, reviewCount, location, title, price }) => {
+const Card = props => {
+  console.log(props);
+  const tagLine =
+    props.openSpots === 0
+      ? 'sold out'
+      : props.location === 'Online'
+      ? 'online'
+      : undefined;
+
   return (
     <div className="experiences--card">
-      <span className="card--tag">{tag}</span>
+      {tagLine && <span className="card--tag">{tagLine}</span>}
 
-      <img src={`${img}`} alt="experience-image" className="card--image" />
+      <img
+        src={`${props.coverImg}`}
+        alt="experience-image"
+        className="card--image"
+      />
 
       <p className="card--rating">
         <span>
-          <img src={star} alt="star" /> {rating}{' '}
+          <img src={star} alt="star" /> {props.stats.rating}{' '}
         </span>
-        ({reviewCount}) • {location}
+        ({props.stats.reviewCount}) • {props.location}
       </p>
-      <h3 className="card--title">{title}</h3>
+      <h3 className="card--title">{props.title}</h3>
       <span className="card--pricing">
-        <strong>From ${price}</strong> / person
+        <strong>From ${props.price}</strong> / person
       </span>
     </div>
   );
