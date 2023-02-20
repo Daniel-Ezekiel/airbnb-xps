@@ -4,6 +4,7 @@ import cardData from '../data';
 const AllCards = () => {
   const cards = cardData.map(data => (
     <Card
+      key={data.id}
       tag={data.openSpots ? 'online' : 'sold out'}
       img={data.coverImg}
       rating={data.stats.rating.toFixed(1)}

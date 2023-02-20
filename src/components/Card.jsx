@@ -6,7 +6,7 @@ const Card = ({ tag, img, rating, reviewCount, location, title, price }) => {
       <span className="card--tag">{tag}</span>
 
       <img
-        src={`../src/assets/${img}`}
+        src={`../assets/${img}`}
         alt="experience-image"
         className="card--image"
       />
