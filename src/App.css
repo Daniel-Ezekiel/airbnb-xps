@@ -35,13 +35,17 @@ header {
 }
 
 main {
-  max-width: 102.4rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5rem;
+}
+
+main > section {
+  max-width: 102.4rem;
+  margin: auto;
 }
 
 .hero {
@@ -149,5 +153,11 @@ main {
   .hero--description {
     width: 97%;
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .experiences--card {
+    width: 17.6rem;
   }
 }
