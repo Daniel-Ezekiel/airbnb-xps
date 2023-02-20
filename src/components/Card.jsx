@@ -1,26 +1,25 @@
-import experienceImage from '../assets/katie-zaferes.png';
 import star from '../assets/star.png';
 
-const Card = () => {
+const Card = ({ tag, img, rating, reviewCount, country, title, price }) => {
   return (
     <div className="experiences--card">
-      <span className="card--tag">Sold out</span>
+      <span className="card--tag">{tag}</span>
 
       <img
-        src={experienceImage}
+        src={`../src/assets/${img}`}
         alt="experience-image"
         className="card--image"
       />
 
       <p className="card--rating">
         <span>
-          <img src={star} alt="star" /> 5.0{' '}
+          <img src={star} alt="star" /> {rating}{' '}
         </span>
-        (6) . USA
+        ({reviewCount}) . {country}
       </p>
-      <h3 className="card--title">Life lessons with Katie Zaferes</h3>
+      <h3 className="card--title">{title}</h3>
       <span className="card--pricing">
-        <strong>From $136</strong> / person
+        <strong>From ${price}</strong> / person
       </span>
     </div>
   );

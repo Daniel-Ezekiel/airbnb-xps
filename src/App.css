@@ -36,7 +36,6 @@ header {
 
 main {
   max-width: 102.4rem;
-  margin: auto;
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -75,11 +74,16 @@ main {
 
 .experiences {
   width: 100%;
+  padding: 1rem 0;
+  align-self: flex-start;
+  display: flex;
+  gap: 1.5rem;
+  overflow: scroll;
 }
 
 .experiences--card {
   position: relative;
-  width: 17.6rem;
+  min-width: 17.6rem;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
