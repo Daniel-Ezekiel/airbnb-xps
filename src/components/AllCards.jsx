@@ -1,37 +1,20 @@
 import Card from './Card';
+import cardData from '../data';
 
 const AllCards = () => {
-  return (
-    <section className="experiences">
-      <Card
-        tag="sold out"
-        img="katie-zaferes.png"
-        rating="5.0"
-        reviewCount="6"
-        country="USA"
-        title="Life Lessons with Katie Zaferes"
-        price="136"
-      />
-      <Card
-        tag="sold out"
-        img="katie-zaferes.png"
-        rating="5.0"
-        reviewCount="6"
-        country="USA"
-        title="Life Lessons with Katie Zaferes"
-        price="136"
-      />
-      <Card
-        tag="sold out"
-        img="katie-zaferes.png"
-        rating="5.0"
-        reviewCount="6"
-        country="USA"
-        title="Life Lessons with Katie Zaferes"
-        price="136"
-      />
-    </section>
-  );
+  const cards = cardData.map(data => (
+    <Card
+      tag={data.openSpots ? 'online' : 'sold out'}
+      img={data.coverImg}
+      rating={data.stats.rating.toFixed(1)}
+      reviewCount={data.stats.reviewCount}
+      location={data.location}
+      title={data.title}
+      price={data.price}
+    />
+  ));
+
+  return <section className="experiences">{cards}</section>;
 };
 
 export default AllCards;
